@@ -5,12 +5,16 @@
 Answer the following questions in the provided markdown file before turning in this exercise:
 
 - How do block-level elements affect the document flow?
+  Starts on a new line.
 
 - How do inline elements affect the document flow?
+  Occupies only the space bounded by the tags defining the element.
 
 - What are the default width and height of a block-level element?
+  Occupies the full width available.
 
 - What are the default width and height of an inline element?
+  Occupies only the space bounded by the tags defining the element.
 
 ## Notes
 
