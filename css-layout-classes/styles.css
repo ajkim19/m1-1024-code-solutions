@@ -1,0 +1,35 @@
+h1,
+h2,
+p {
+  font-family: sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.column-one-third {
+  width: calc(100% / 3);
+}
+
+.column-two-thirds {
+  width: calc(100% * 2 / 3);
+}
+
+.column-one-quarter {
+  width: calc(25%);
+}
