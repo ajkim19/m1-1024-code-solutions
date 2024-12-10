@@ -1,0 +1,81 @@
+* {
+  font-family: Karla, sans-serif;
+}
+
+h1,
+h3,
+button {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 58px;
+  letter-spacing: 3px;
+  margin: 15px auto;
+}
+
+h3 {
+  letter-spacing: 0.5px;
+}
+
+p {
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 30px;
+}
+
+button {
+  font-size: 18px;
+  color: rgb(225, 34, 0);
+  border-color: rgb(225, 34, 0);
+  border-width: 3px;
+  background-color: white;
+  padding: 10px 50px;
+  margin: 0;
+}
+
+.row {
+  padding: auto;
+}
+
+.container {
+  width: 1150px;
+}
+
+.column-full {
+  flex-basis: 100%;
+  justify-content: center;
+  margin: 25px;
+}
+
+.column-half {
+  flex-basis: 50%;
+  flex-wrap: wrap;
+  margin: 10px 45px;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.title-head {
+  width: 700px;
+  text-align: center;
+}
+
+.info {
+  flex: 1;
+  padding: 25px 0;
+}
+
+.info-header {
+  width: 250px;
+}
+
+.info-body {
+  width: 315px;
+}
+
+.button {
+  margin: 10px;
+}
