@@ -40,6 +40,7 @@ button {
 
 .container {
   width: 1150px;
+  margin: auto;
 }
 
 .column-full {
