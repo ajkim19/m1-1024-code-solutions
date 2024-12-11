@@ -1,0 +1,47 @@
+* {
+  font-family: 'DM Sans', sans-serif;
+}
+
+h1 {
+  margin: 10px 0;
+}
+
+p {
+  font-weight: 600;
+}
+
+img {
+  width: 274px;
+  height: 411px;
+  object-fit: cover;
+}
+
+span {
+  color: lightgray;
+}
+
+.sale {
+  color: black;
+  background-color: rgb(251, 236, 218);
+}
+
+.container {
+  width: 1500px;
+  margin: 0 auto;
+}
+
+.row {
+  justify-content: center;
+  flex-basis: 100%;
+}
+
+.column-fifth {
+  width: 20%;
+  box-sizing: border-box;
+  padding: 13px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
