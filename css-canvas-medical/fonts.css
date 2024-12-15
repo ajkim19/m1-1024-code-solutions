@@ -18,3 +18,38 @@
   font-weight: 300;
   src: url('TiemposHeadline-LightItalic.woff2') format('woff2');
 }
+
+h1,
+h2 {
+  font-family: 'Tiempos Headline', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3,
+p,
+a {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  line-height: 28px;
+}
+
+a {
+  text-decoration: none;
+}
