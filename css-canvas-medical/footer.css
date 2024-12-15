@@ -6,6 +6,12 @@ footer {
 .learn-more {
   position: relative;
   color: rgb(100, 100, 100);
+  border-style: solid;
+  border-width: 1px;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+  border-color: rgb(215, 215, 215);
 }
 
 .learn-more-header {
