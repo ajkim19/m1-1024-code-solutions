@@ -1,0 +1,184 @@
+/* stylelint-disable no-descending-specificity */
+
+img {
+  width: 100%;
+}
+
+p {
+  line-height: 24px;
+}
+
+/* Header */
+.about-us-link {
+  font-weight: bold;
+}
+
+/* About Us Header */
+.about-us-header {
+  width: 1100px;
+  height: 550px;
+  background-image: url('images/about-us/about-us-header.jpg');
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  margin-top: 125px;
+  margin-bottom: 75px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.overlay1 {
+  background: rgba(255, 255, 255, 0.15);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.overlay2 {
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.about-us-header-info {
+  color: white;
+  padding-top: 175px;
+  padding-bottom: 175px;
+  padding-right: 50px;
+  padding-left: 60px;
+  position: absolute;
+  top: 0;
+  right: 400px;
+  bottom: 0;
+  left: 0;
+}
+
+.about-us-header-info > h1 {
+  margin: 3px 0;
+}
+
+.about-us-header-info > p {
+  font-size: 18px;
+}
+
+/* Believe Section */
+.believe {
+  color: rgb(100, 100, 100);
+  padding: 0 100px;
+  margin-bottom: 75px;
+}
+
+.believe-header {
+  justify-content: center;
+}
+
+.believe-header > h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.believe-body {
+  padding: 0 250px;
+}
+
+.believe-body > p,
+.believe-body > a > p {
+  line-height: 24px;
+  margin: 7px 0;
+}
+
+.believe-body > a > p {
+  color: rgb(100, 100, 100);
+  font-weight: bold;
+}
+
+/* Team Section */
+.team {
+  color: rgb(100, 100, 100);
+  background-color: rgb(249, 249, 249);
+  margin: 0 100px;
+  padding: 35px 50px;
+}
+
+.team-header {
+  justify-content: center;
+}
+
+.team-member {
+  box-sizing: border-box;
+  justify-content: center;
+  padding: 5px 0;
+}
+
+.team-member-image {
+  box-sizing: border-box;
+  padding: 25px 60px;
+}
+
+.team-member-image > img {
+  border-radius: 100%;
+}
+
+.team-member-info {
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-member-info > h2 {
+  font-size: 27px;
+  margin: 0;
+}
+
+.team-member-info > p {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+/* Board Section */
+.board {
+  color: rgb(100, 100, 100);
+  background-color: rgb(249, 249, 249);
+  margin: 0 100px;
+  padding-top: 25px;
+  padding-bottom: 85px;
+}
+
+.board-header {
+  justify-content: center;
+}
+
+.board-members {
+  flex-direction: column;
+  align-items: center;
+}
+
+.board-members > p {
+  margin: 10px 0;
+}
+
+/* Story Section */
+.story {
+  justify-content: center;
+  color: rgb(100, 100, 100);
+  margin: 0 100px;
+  padding-top: 55px;
+  padding-bottom: 100px;
+  padding-left: 250px;
+  padding-right: 250px;
+}
+
+.story > h2 {
+  margin: 10px 0;
+}
+
+.story > p {
+  margin: 7px 0;
+}
+
+/* stylelint-enable no-descending-specificity */

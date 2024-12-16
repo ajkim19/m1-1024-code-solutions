@@ -29,6 +29,10 @@ body {
   flex-basis: 50%;
 }
 
+.column-third {
+  flex-basis: calc(100% / 3);
+}
+
 .column-quarter {
   width: 25%;
 }
