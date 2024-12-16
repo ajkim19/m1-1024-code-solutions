@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  justify-content: center;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container {
+  width: 1300px;
+  justify-content: center;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.column-two-thirds {
+  flex-basis: calc(100% * 2 / 3);
+}
+
+.column-half {
+  flex-basis: 50%;
+}
+
+.column-quarter {
+  width: 25%;
+}

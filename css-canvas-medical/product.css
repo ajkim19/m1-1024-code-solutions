@@ -1,0 +1,168 @@
+/* Product Header */
+img {
+  width: 100%;
+}
+
+/* Header */
+.product-link {
+  font-weight: bold;
+}
+
+/* Product Header */
+.product-header {
+  width: 1100px;
+  height: 550px;
+  background-image: url('images/product/product-header.jpg');
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  margin-top: 125px;
+  margin-bottom: 75px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.overlay1 {
+  background: rgba(255, 255, 255, 0.15);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.overlay2 {
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.product-header-info {
+  color: white;
+  padding-top: 175px;
+  padding-bottom: 175px;
+  padding-right: 100px;
+  padding-left: 60px;
+  position: absolute;
+  top: 0;
+  right: 400px;
+  bottom: 0;
+  left: 0;
+}
+
+.product-header-info > h1 {
+  margin: 3px 0;
+}
+
+/* Product Section 1 */
+.product1 {
+  color: rgb(100, 100, 100);
+  background: rgb(249, 249, 249);
+  padding: 75px 100px;
+}
+
+.product1-image {
+  margin: auto;
+  padding-right: 0;
+}
+
+.product1-body {
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 105px;
+}
+
+.product1-body > h2,
+.product1-body > p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: auto;
+}
+
+.product1-body > p {
+  line-height: 25px;
+}
+
+/* Product Section 2 */
+.product2 {
+  color: rgb(100, 100, 100);
+  padding-top: 25px;
+  padding-bottom: 75px;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+.product2-image {
+  margin: auto;
+  padding-left: 0;
+}
+
+.product2-body {
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-right: 100px;
+}
+
+.product2-body > h2,
+.product2-body > p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: auto;
+}
+
+.product2-body > p {
+  line-height: 25px;
+}
+
+.product2-info {
+  padding-right: 40px;
+}
+
+.italic {
+  padding-right: 10px;
+}
+
+/* Product Section 3 */
+.product3 {
+  color: rgb(100, 100, 100);
+  background: rgb(249, 249, 249);
+  padding-top: 75px;
+  padding-bottom: 25px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.product3-image {
+  margin: auto;
+  padding-right: 0;
+}
+
+.product3-body {
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 105px;
+}
+
+.product3-body > h2,
+.product3-body > p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: auto;
+}
+
+.product3-body > p {
+  line-height: 25px;
+}
+
+.product3-info {
+  padding-right: 25px;
+}
