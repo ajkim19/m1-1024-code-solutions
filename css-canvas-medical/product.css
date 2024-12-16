@@ -3,6 +3,10 @@ img {
   width: 100%;
 }
 
+.product-link {
+  font-weight: bold;
+}
+
 .product-header {
   width: 1100px;
   height: 550px;
