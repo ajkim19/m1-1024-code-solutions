@@ -1,0 +1,100 @@
+img {
+  width: 100%;
+}
+
+/* Header */
+.implementation-link {
+  font-weight: bold;
+}
+
+/* Implementation Header */
+.implementation-header {
+  width: 1100px;
+  height: 530px;
+  background-image: url('images/implementation/implementation-header.jpg');
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  margin-top: 175px;
+  margin-bottom: 75px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.overlay1 {
+  background: rgba(255, 255, 255, 0.15);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.overlay2 {
+  background: rgba(0, 0, 0, 0.225);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.implementation-header-info {
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 275px;
+  padding-right: 100px;
+  padding-left: 70px;
+  position: absolute;
+  top: 0;
+  right: 400px;
+  bottom: 0;
+  left: 0;
+}
+
+.implementation-header-info > p {
+  padding-right: 20px;
+}
+
+.implementation-header-info > h1 {
+  margin: 3px 0;
+}
+
+/* ROI Section */
+.roi {
+  color: rgb(100, 100, 100);
+  margin-bottom: 150px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.roi-header > h2,
+.roi-info-header > h2 {
+  font-size: 34px;
+}
+
+.roi-header > h2 {
+  margin: 45px auto;
+}
+
+.roi-body {
+  margin: 0 251px;
+}
+
+.roi-info {
+  justify-content: start;
+}
+
+.roi-info-header {
+  height: 70px;
+}
+
+.roi-info-header > h3 {
+  margin-top: 45px;
+  margin-bottom: 0;
+  margin-left: 8px;
+}
+
+.roi-info-body > p {
+  line-height: 22px;
+}
