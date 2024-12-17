@@ -36,7 +36,8 @@ h2 {
 
 h3,
 p,
-a {
+a,
+input {
   font-family: Avenir, sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -58,4 +59,17 @@ p.italic {
 
 a {
   text-decoration: none;
+}
+
+input,
+input::placeholder {
+  font-size: 24px;
+}
+
+input::placeholder {
+  color: rgb(210, 210, 210);
+}
+
+input:focus {
+  outline: none;
 }
