@@ -1,0 +1,84 @@
+img {
+  width: 100%;
+}
+
+/* Header */
+.blog-link {
+  font-weight: bold;
+}
+
+/* Blog Header */
+.subscribe,
+.subscribe-form {
+  flex-direction: column;
+  align-items: center;
+}
+
+.subscribe {
+  padding-top: 100px;
+  padding-bottom: 25px;
+}
+
+.subscribe > h2,
+.subscribe > p {
+  color: rgb(100, 100, 100);
+  margin: 10px 0;
+}
+
+.subscribe > h2 {
+  margin: 15px 0;
+  font-size: 32px;
+}
+
+.subscribe-form > p {
+  margin: 0;
+}
+
+.subscribe-form > input {
+  text-align: center;
+  width: 500px;
+  height: 50px;
+  padding-bottom: 5px;
+  border-width: 1px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+.subscribe-form > a {
+  font-size: 18px;
+  padding: 15px 45px;
+}
+
+/* Articles */
+.articles {
+  padding-top: 25px;
+  padding-bottom: 100px;
+  padding-left: 175px;
+  padding-right: 175px;
+}
+
+.article {
+  padding: 25px 15px;
+}
+
+.article > img {
+  width: 445px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.article > h2,
+.article > p {
+  color: rgb(100, 100, 100);
+}
+
+.article > h2 {
+  margin: 8px 0;
+}
+
+.article > p {
+  margin: 0;
+}
