@@ -37,7 +37,8 @@ h2 {
 h3,
 p,
 a,
-input {
+input,
+textarea {
   font-family: Avenir, sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -62,10 +63,13 @@ a {
 }
 
 input,
-input::placeholder {
+input::placeholder,
+textarea,
+textarea::placeholder {
   font-size: 24px;
 }
 
+textarea::placeholder,
 input::placeholder {
   color: rgb(210, 210, 210);
 }

@@ -1,84 +1,79 @@
+/* Contact Us Header */
 img {
   width: 100%;
 }
 
-/* Header */
-.blog-link {
-  font-weight: bold;
-}
-
-/* Blog Header */
-.subscribe,
-.subscribe-form {
-  flex-direction: column;
-  align-items: center;
-}
-
-.subscribe {
-  padding-top: 100px;
-  padding-bottom: 25px;
-}
-
-.subscribe > h2,
-.subscribe > p {
+h2,
+h3 {
   color: rgb(100, 100, 100);
-  margin: 10px 0;
 }
 
-.subscribe > h2 {
-  margin: 15px 0;
+h2 {
   font-size: 32px;
 }
 
-.subscribe-form > p {
+h3 {
+  font-size: 22px;
+  line-height: 33px;
+}
+
+.contact-us {
+  justify-content: space-between;
+  align-items: start;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.get-in-touch {
+  flex-basis: 37%;
+  padding: 25px 0;
+}
+
+.get-in-touch > * {
+  padding: 10px 0;
   margin: 0;
 }
 
-.subscribe-form > input {
+.phone-number {
+  font-size: 30px;
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.customer-info {
+  justify-content: center;
+  flex-basis: 49%;
+}
+
+.customer-info > form {
+  justify-content: center;
+}
+
+.customer-info > form > input,
+.customer-info > form > textarea {
   text-align: center;
-  width: 500px;
-  height: 50px;
-  padding-bottom: 5px;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  border-color: rgb(175, 175, 175);
   border-width: 1px;
   border-top: 0;
   border-left: 0;
   border-right: 0;
-  margin-top: 25px;
-  margin-bottom: 50px;
+  width: 100%;
 }
 
-.subscribe-form > a {
+.customer-info > form > textarea {
+  overflow: hidden;
+  justify-content: end;
+  flex-basis: auto;
+  padding: 50px 0;
+}
+
+.submit {
   font-size: 18px;
-  padding: 15px 45px;
-}
-
-/* Articles */
-.articles {
-  padding-top: 25px;
-  padding-bottom: 100px;
-  padding-left: 175px;
-  padding-right: 175px;
-}
-
-.article {
-  padding: 25px 15px;
-}
-
-.article > img {
-  width: 445px;
-  height: 250px;
-  object-fit: cover;
-}
-
-.article > h2,
-.article > p {
-  color: rgb(100, 100, 100);
-}
-
-.article > h2 {
-  margin: 8px 0;
-}
-
-.article > p {
-  margin: 0;
+  padding: 10px 15px;
+  margin: 45px 0;
 }
