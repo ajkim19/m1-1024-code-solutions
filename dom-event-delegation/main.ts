@@ -2,8 +2,6 @@ const taskList = document.querySelector('.task-list');
 if (!taskList) throw new Error('taskList does not exist');
 const buttons = document.getElementsByTagName('button');
 if (!buttons) throw new Error('buttons does not exist');
-const taskListItems = document.getElementsByClassName('task-list-item');
-if (!taskListItems) throw new Error('taskListItems does not exist');
 
 taskList.addEventListener('click', (event: Event) => {
   const eventTarget = event.target as HTMLElement;
