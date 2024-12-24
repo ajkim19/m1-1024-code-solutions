@@ -74,26 +74,33 @@ const pokedex: Pokemon[] = [
 function renderPokemon(pokemon: Pokemon): HTMLDivElement {
   // Creates outer 'div.column-third' element
   const $divCol3: HTMLDivElement = document.createElement('div');
+  if (!$divCol3) throw new Error('$divCol3 does not exist');
   $divCol3.setAttribute('class', 'column-third');
 
   // Creates and appends 'div.pokemon-card' element
   const $divPokeCard: HTMLDivElement = document.createElement('div');
+  if (!$divPokeCard) throw new Error('$divPokeCard does not exist');
   $divPokeCard.className = 'pokemon-card';
   $divCol3.append($divPokeCard);
 
   // Creates and appends 'img' and 'div.pokemon-card-text' elements
   const $imgPoke: HTMLDivElement = document.createElement('img');
+  if (!$imgPoke) throw new Error('$imgPoke does not exist');
   $imgPoke.setAttribute('src', `${pokemon.imageUrl}`);
   const $divPokeCardText: HTMLDivElement = document.createElement('div');
+  if (!$divPokeCardText) throw new Error('$divPokeCardText does not exist');
   $divPokeCardText.className = 'pokemon-card-text';
   $divPokeCard.append($imgPoke, $divPokeCardText);
 
   // Creates and appends 'h2', 'h3', and 'p' elements
   const $h2: HTMLDivElement = document.createElement('h2');
+  if (!$h2) throw new Error('$h2 does not exist');
   $h2.textContent = `${pokemon.name}`;
   const $h3: HTMLDivElement = document.createElement('h3');
+  if (!$h3) throw new Error('$h3 does not exist');
   $h3.textContent = `${pokemon.number}`;
   const $p: HTMLDivElement = document.createElement('p');
+  if (!$p) throw new Error('$p does not exist');
   $p.textContent = `${pokemon.description}`;
   $divPokeCardText.append($h2, $h3, $p);
 
