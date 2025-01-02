@@ -1,0 +1,12 @@
+{
+  "folders": [
+	{
+		"name": "m1-1024-code-solutions",
+		"path": "../.."
+	}
+],
+  "settings": {
+    "editor.rulers": [],
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
