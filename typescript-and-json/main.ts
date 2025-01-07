@@ -28,3 +28,8 @@ const studentJSON = '{"id": 1234, "name": "Aaron Kim"}';
 
 console.log('studentJSON:', studentJSON);
 console.log('typeof studentJSON:', typeof studentJSON);
+
+const studentParse = JSON.parse(studentJSON);
+
+console.log('studentParse:', studentParse);
+console.log('typeof studentParse:', typeof studentParse);
