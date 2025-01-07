@@ -18,3 +18,8 @@ const books: object[] = [
 
 console.log('books:', books);
 console.log('typeof books:', typeof books);
+
+const booksStringify = JSON.stringify(books);
+
+console.log('booksStringify:', booksStringify);
+console.log('typeof booksStringify:', typeof booksStringify);
