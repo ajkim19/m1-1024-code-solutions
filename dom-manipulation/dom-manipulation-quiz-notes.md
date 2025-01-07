@@ -23,7 +23,8 @@ Answer the following questions in the provided markdown file before turning in t
   It would be more complicated because then not only would we have to type out the reference expression every time we wanted to access the DOM object, but we would also be querying the DOM that many times. If we were to use variables, we'd not only be typing less, but also only be querying the DOM for the number of times we store the query into the variable.
 
 - Why is storing information about a program in variables better than only storing it in the DOM?
-  It reduces the number of times we query the DOM.
+  It reduces the number of times we query the DOM. The DOM is a representation, not a data storage.
+  - Separation of concern.
 
 ## Notes
 
