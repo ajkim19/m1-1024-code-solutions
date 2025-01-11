@@ -3,11 +3,21 @@ body {
   margin: 0;
 }
 
-span {
-  font-family: 'Courier Prime', Courier, monospace;
+span,
+.accuracy {
   font-size: 32px;
   font-weight: 700;
   text-underline-offset: 9px;
+}
+
+span {
+  font-family: 'Courier Prime', Courier, monospace;
+}
+
+.accuracy {
+  font-family: Barlow, sans-serif;
+  height: 38.4px;
+  margin-top: 50px;
 }
 
 .flex {
@@ -29,8 +39,4 @@ span {
 
 .letter {
   white-space: pre;
-}
-
-.accuracy {
-  margin: 50px;
 }
