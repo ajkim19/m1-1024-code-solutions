@@ -1,6 +1,3 @@
-const $wordString = document.querySelector('.word-string');
-if (!$wordString) throw new Error('$wordString does not exist');
-
 // Encases each letter of a string in a 'span' tag
 function renderLetter(char: string): HTMLSpanElement {
   const $spanChar = document.createElement('span');
@@ -9,10 +6,37 @@ function renderLetter(char: string): HTMLSpanElement {
   return $spanChar;
 }
 
-const words = 'grumpy wizards make toxic brew';
-
 // Places each character in words between span tags
-for (let i = 0; i < words.length; i++) {
-  const $spanLetter = renderLetter(words[i]);
-  $wordString.append($spanLetter);
+function toType(string: string): void {
+  const $wordString = document.querySelector('.word-string');
+  if (!$wordString) throw new Error('$wordString does not exist');
+  for (let i = 0; i < string.length; i++) {
+    const $wordChar = renderLetter(string[i]);
+    if (i === 0) {
+      $wordChar.style.textDecoration = 'underline';
+    }
+    $wordString.append($wordChar);
+  }
 }
+
+// Sets up the start of the application
+const words = 'My dog is a stubborn B.';
+toType(words);
+const $spanLetters: NodeListOf<HTMLSpanElement> =
+  document.querySelectorAll('span.letter');
+if (!$spanLetters) throw new Error('spanLetters does not exist');
+
+let charNum = 0;
+document.addEventListener('keydown', (event: KeyboardEvent) => {
+  if (event.key === $spanLetters[charNum].textContent) {
+    console.log(`You pressed the right key - ${event.key}`);
+    $spanLetters[charNum].style.textDecoration = 'none';
+    $spanLetters[charNum].style.color = 'rgb(0, 225, 0)';
+    if ($spanLetters[charNum + 1]) {
+      $spanLetters[charNum + 1].style.textDecoration = 'underline';
+    }
+    charNum++;
+  } else {
+    $spanLetters[charNum].style.color = 'red';
+  }
+});
