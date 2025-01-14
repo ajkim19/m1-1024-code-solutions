@@ -65,24 +65,36 @@ const keyboardKey = [
   'shift-r',
   'space',
 ];
-// Encases each letter of a string in a 'span' tag
+// Encases each letter of a string in a 'span' tag with clean styling
 function renderLetter(char) {
   const $spanChar = document.createElement('span');
   $spanChar.className = 'letter';
   $spanChar.textContent = char;
+  // Remove any existing styles
+  $spanChar.removeAttribute('style');
   return $spanChar;
 }
 // Places each character in words between span tags
 function toType(string) {
   if (!$wordString) throw new Error('$wordString does not exist');
-  $wordString.innerHTML = '';
+  // Clear existing content
+  while ($wordString.firstChild) {
+    $wordString.removeChild($wordString.firstChild);
+  }
+  // Create fresh elements
   for (let i = 0; i < string.length; i++) {
     const $wordChar = renderLetter(string[i]);
-    if (i === 0) {
-      $wordChar.style.textDecoration = 'underline';
-    }
-    $wordString.append($wordChar);
+    $wordString.appendChild($wordChar);
   }
+  // Get all letters and set initial styles
+  const $letters = document.querySelectorAll('span.letter');
+  $letters.forEach((letter, index) => {
+    letter.style.color = 'black';
+    letter.style.textDecoration = 'none';
+    if (index === 0) {
+      letter.style.textDecoration = 'underline';
+    }
+  });
 }
 function addKeyboardKey(lettersList) {
   for (let i = 0; i < lettersList.length; i++) {
@@ -193,14 +205,36 @@ function keyboardHintOff(charNum) {
   $keyToPress.style.fontWeight = '500';
   $keyToPress.style.color = 'black';
 }
-function resetExercise() {
+// Resets the application to starting conditions
+function reset() {
   if (!$wordString) throw new Error('$wordString does not exist');
   if (!$accuracy) throw new Error('$accuracy does not exist');
-  $wordString.innerHTML = '';
+  // Clear all existing content
+  while ($wordString.firstChild) {
+    $wordString.removeChild($wordString.firstChild);
+  }
   $accuracy.innerHTML = '';
+  // Reset trackers
   currentPosition = 0;
   accuracyArray.length = 0;
+  // Reset all keyboard keys
+  document.querySelectorAll('.keyboard-key h1').forEach((key) => {
+    if (key instanceof HTMLElement) {
+      key.removeAttribute('style');
+      key.style.fontWeight = '500';
+      key.style.color = 'black';
+    }
+  });
+  // Create fresh typing exercise
   toType(words);
+  // Ensure global reference to span letters is updated
+  const $newLetters = document.querySelectorAll('span.letter');
+  if ($newLetters.length === 0)
+    throw new Error('No span.letter elements found');
+  // Update the span letters reference
+  $spanLetters = $newLetters;
+  // Reset keyboard hint
+  keyboardHintOn(0);
 }
 // Sets up the start of the application
 const words = 'My dog is being stubborn.';
@@ -211,39 +245,27 @@ const accuracyArray = [];
 // Adds new keys to keyboard to be manipulated
 addKeyboardKey(keyboardKey);
 let currentPosition = 0;
-let upperCase = false;
-const $spanLetters = document.querySelectorAll('span.letter');
-if ($spanLetters.length === 0) throw new Error('No span.letter elements found');
-keyboardHintOn(currentPosition);
+// let upperCase = false;
+let $spanLetters = document.querySelectorAll('span.letter');
+// Update the event listener to use the refreshed elements
 document.addEventListener('keydown', (event) => {
-  // // Includes the 'Shift' key for capitalized letters
-  // // Checks if the letter is capitalized
-  // if (
-  //   $spanLetters[currentPosition].textContent ===
-  //   $spanLetters[currentPosition].textContent?.toLocaleUpperCase()
-  // ) {
-  //   upperCase = true;
-  // }
-  //////////////
-  // Add Code //
-  //////////////
-  // Disregards the 'Shift' key
   if (event.key === 'Shift') {
     return;
   }
-  // Changes the letter green if the correct key had been pressed
-  if (event.key === $spanLetters[currentPosition].textContent) {
-    $spanLetters[currentPosition].style.textDecoration = '';
-    $spanLetters[currentPosition].style.color = 'rgb(0, 180, 0)';
+  const $currentLetter = $spanLetters[currentPosition];
+  if (!$currentLetter) return;
+  if (event.key === $currentLetter.textContent) {
+    $currentLetter.style.textDecoration = '';
+    $currentLetter.style.color = 'rgb(0, 180, 0)';
     keyboardHintOff(currentPosition);
-    if ($spanLetters[currentPosition + 1]) {
-      $spanLetters[currentPosition + 1].style.textDecoration = 'underline';
+    const $nextLetter = $spanLetters[currentPosition + 1];
+    if ($nextLetter) {
+      $nextLetter.style.textDecoration = 'underline';
       keyboardHintOn(currentPosition + 1);
     }
     if (accuracyArray.length < currentPosition + 1) {
       accuracyArray.push(1);
       if (accuracyArray.length === possibleKeys) {
-        // Calculates accuracy of typing
         const initialValue = 0;
         const correctKeysTotal = accuracyArray.reduce(
           (toAdd, currentSum) => toAdd + currentSum,
@@ -252,18 +274,17 @@ document.addEventListener('keydown', (event) => {
         const accuracyScore = Math.floor(
           (correctKeysTotal / possibleKeys) * 100
         );
-        // Displays the final accuracy calculation
         $accuracy.innerHTML = `You were <div class="accuracy-score">${accuracyScore}%</div> accurate with your typing`;
         setTimeout(() => {
           if (confirm('Would you like to try again?')) {
-            resetExercise();
+            reset();
           }
         }, 0);
       }
     }
     currentPosition++;
   } else {
-    $spanLetters[currentPosition].style.color = 'red';
+    $currentLetter.style.color = 'red';
     if (accuracyArray.length < currentPosition + 1) {
       accuracyArray.push(0);
     }
