@@ -18,6 +18,17 @@
       }
 
       /* your code here 👇 */
+      @media screen and (min-width: 575px) and (max-width: 767px) {
+        .card-wrapper {
+          flex-basis: 50%;
+        }
+      }
+
+      @media screen and (min-width: 767px) {
+        .card-wrapper {
+          flex-basis: calc(100% / 3);
+        }
+      }
     </style>
   </head>
   <body>
