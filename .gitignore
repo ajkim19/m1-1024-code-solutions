@@ -5,3 +5,4 @@ node_modules
 **/*.log
 **/.env
 react-*/server/public/*.js*
+/workspaces/m1-1024-code-solutions/zz-best-practices.md
