@@ -28,3 +28,5 @@ const lastStudent: string = students[lastIndex];
 
 console.log(`The last student in the array is ${lastStudent}.`);
 console.log('value of students:', students);
+
+//
