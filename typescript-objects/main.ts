@@ -64,3 +64,5 @@ delete pet.kind;
 
 console.log('value of pet:', pet);
 console.log('typeof pet:', typeof pet);
+
+// Stuff
