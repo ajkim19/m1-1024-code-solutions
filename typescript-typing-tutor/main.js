@@ -1,18 +1,4 @@
 'use strict';
-const $wordString = document.querySelector('.word-string');
-if (!$wordString) throw new Error('$wordString does not exist');
-const $accuracy = document.querySelector('.accuracy');
-if (!$accuracy) throw new Error('$accuracy does not exist');
-const $numbersRow = document.querySelector('.numbers-row');
-if (!$numbersRow) throw new Error('$numbersRow does not exist');
-const $topRow = document.querySelector('.top-row');
-if (!$topRow) throw new Error('$topRow does not exist');
-const $middleRow = document.querySelector('.middle-row');
-if (!$middleRow) throw new Error('$middleRow does not exist');
-const $bottomRow = document.querySelector('.bottom-row');
-if (!$bottomRow) throw new Error('$bottomRow does not exist');
-const $spaceRow = document.querySelector('.space-row');
-if (!$spaceRow) throw new Error('$spaceRow does not exist');
 const keyboardKey = [
   'grave-accent',
   '1',
@@ -65,30 +51,75 @@ const keyboardKey = [
   'shift-r',
   'space',
 ];
-// Encases each letter of a string in a 'span' tag
+const keyboardKeyL = [
+  'q',
+  'w',
+  'e',
+  'r',
+  't',
+  'a',
+  's',
+  'd',
+  'f',
+  'g',
+  'z',
+  'x',
+  'c',
+  'v',
+  'b',
+];
+const keyboardKeyR = ['y', 'u', 'i', 'o', 'p', 'h', 'j', 'k', 'l', 'n', 'm'];
+const $wordString = document.querySelector('.word-string');
+if (!$wordString) throw new Error('$wordString does not exist');
+const $accuracy = document.querySelector('.accuracy');
+if (!$accuracy) throw new Error('$accuracy does not exist');
+const $numbersRow = document.querySelector('.numbers-row');
+if (!$numbersRow) throw new Error('$numbersRow does not exist');
+const $topRow = document.querySelector('.top-row');
+if (!$topRow) throw new Error('$topRow does not exist');
+const $middleRow = document.querySelector('.middle-row');
+if (!$middleRow) throw new Error('$middleRow does not exist');
+const $bottomRow = document.querySelector('.bottom-row');
+if (!$bottomRow) throw new Error('$bottomRow does not exist');
+const $spaceRow = document.querySelector('.space-row');
+if (!$spaceRow) throw new Error('$spaceRow does not exist');
+// Encases each letter of a string in a 'span' tag with clean styling
 function renderLetter(char) {
   const $spanChar = document.createElement('span');
   $spanChar.className = 'letter';
   $spanChar.textContent = char;
+  // Remove any existing styles
+  $spanChar.removeAttribute('style');
   return $spanChar;
 }
 // Places each character in words between span tags
 function toType(string) {
   if (!$wordString) throw new Error('$wordString does not exist');
-  $wordString.innerHTML = '';
+  // Clear existing content
+  while ($wordString.firstChild) {
+    $wordString.removeChild($wordString.firstChild);
+  }
+  // Create fresh elements
   for (let i = 0; i < string.length; i++) {
     const $wordChar = renderLetter(string[i]);
-    if (i === 0) {
-      $wordChar.style.textDecoration = 'underline';
-    }
-    $wordString.append($wordChar);
+    $wordString.appendChild($wordChar);
   }
+  // Get all letters and set initial styles
+  const $letters = document.querySelectorAll('span.letter');
+  $letters.forEach((letter, index) => {
+    letter.style.color = 'black';
+    letter.style.textDecoration = 'none';
+    if (index === 0) {
+      letter.style.textDecoration = 'underline';
+    }
+  });
 }
 function addKeyboardKey(lettersList) {
   for (let i = 0; i < lettersList.length; i++) {
     const $keyDivElement = document.createElement('div');
     if (!$keyDivElement) throw new Error('$keyDivElement does not exist');
-    $keyDivElement.className = `keyboard-key ${lettersList[i]} flex`;
+    $keyDivElement.setAttribute('id', `${lettersList[i]}`);
+    $keyDivElement.className = 'keyboard-key flex';
     const $h1Element = document.createElement('h1');
     if (lettersList[i] === 'grave-accent') {
       $h1Element.textContent = '`';
@@ -114,8 +145,6 @@ function addKeyboardKey(lettersList) {
       $h1Element.textContent = '/';
     } else if (lettersList[i] === 'shift-l' || lettersList[i] === 'shift-r') {
       $h1Element.textContent = 'SHIFT';
-    } else if (lettersList[i] === 'space') {
-      $h1Element.textContent = 'SPACE';
     } else {
       $h1Element.textContent = lettersList[i].toLocaleUpperCase();
     }
@@ -161,49 +190,121 @@ function keyboardHintOn(charNum) {
   }
   if (!spanLettersText) throw new Error('spanLettersText does not exist');
   const $keyboardKey = document.querySelector(
-    `.${spanLettersText.toLocaleLowerCase()}`
+    `#${spanLettersText.toLocaleLowerCase()}`
   );
   if (!$keyboardKey) throw new Error('$keyboardKey does not exist');
   console.log('$keyboardKey', $keyboardKey);
   // Makes the key on the keyboard bold and blue
   const $keyToPress = $keyboardKey.children[0];
   if (!$keyToPress) throw new Error('$keyToPress does not exist');
+  $keyToPress.style.fontSize = '28px';
   $keyToPress.style.fontWeight = '900';
+  $keyToPress.style.textShadow = '2px 2px 2px black';
   $keyToPress.style.color = 'rgb(21, 0, 255)';
+  // Checks if left hand keys are capitalized
+  keyboardKeyL.forEach((key) => {
+    if (spanLettersText === key.toLocaleUpperCase()) {
+      // Makes the right shift key on the keyboard bold and blue
+      const $shiftKeyR = document.querySelector('#shift-r > h1');
+      if (!$shiftKeyR) throw new Error('$shiftR does not exist');
+      $shiftKeyR.style.fontSize = '28px';
+      $shiftKeyR.style.fontWeight = '900';
+      $shiftKeyR.style.textShadow = '2px 2px 2px black';
+      $shiftKeyR.style.color = 'rgb(21, 0, 255)';
+    }
+  });
+  // Checks if right hand keys are capitalized
+  keyboardKeyR.forEach((key) => {
+    if (spanLettersText === key.toLocaleUpperCase()) {
+      // Makes the left shift key on the keyboard bold and blue
+      const $shiftKeyL = document.querySelector('#shift-l > h1');
+      if (!$shiftKeyL) throw new Error('$shiftKeyL does not exist');
+      $shiftKeyL.style.fontSize = '28px';
+      $shiftKeyL.style.fontWeight = '900';
+      $shiftKeyL.style.textShadow = '2px 2px 2px black';
+      $shiftKeyL.style.color = 'rgb(21, 0, 255)';
+    }
+  });
 }
 function keyboardHintOff(charNum) {
   const $spanLetter = $spanLetters[charNum];
   if (!$spanLetter) throw new Error('$spanLetter does not exist');
-  let $spanLettersText = $spanLetter.textContent;
-  if (!$spanLettersText) throw new Error('$spanLettersText does not exist');
-  if ($spanLettersText === ' ') {
-    $spanLettersText = 'space';
-  } else if ($spanLettersText === '.') {
-    $spanLettersText = 'period';
+  let spanLettersText = $spanLetter.textContent;
+  if (!spanLettersText) throw new Error('$spanLettersText does not exist');
+  if (spanLettersText === ' ') {
+    spanLettersText = 'space';
+  } else if (spanLettersText === '.') {
+    spanLettersText = 'period';
   }
-  console.log('$spanLettersText', $spanLettersText);
+  console.log('$spanLettersText', spanLettersText);
   const $keyboardKey = document.querySelector(
-    `.${$spanLettersText.toLocaleLowerCase()}`
+    `#${spanLettersText.toLocaleLowerCase()}`
   );
   if (!$keyboardKey) throw new Error('$keyboardKey does not exist');
-  console.log('$keyboardKey', $keyboardKey);
   // Makes the key on the keyboard bold and blue
   const $keyToPress = $keyboardKey.children[0];
   if (!$keyToPress) throw new Error('$keyToPress does not exist');
-  $keyToPress.style.fontWeight = '500';
+  $keyToPress.style.fontSize = '22px';
+  $keyToPress.style.fontWeight = '400';
+  $keyToPress.style.textShadow = 'none';
   $keyToPress.style.color = 'black';
+  keyboardKeyL.forEach((key) => {
+    if (spanLettersText === key.toLocaleUpperCase()) {
+      // Makes the right shift key on the keyboard bold and blue
+      const $shiftKeyR = document.querySelector('#shift-r > h1');
+      if (!$shiftKeyR) throw new Error('$shiftR does not exist');
+      $shiftKeyR.style.fontSize = '22px';
+      $shiftKeyR.style.fontWeight = '400';
+      $shiftKeyR.style.textShadow = 'none';
+      $shiftKeyR.style.color = 'black';
+    }
+  });
+  // Checks if right hand keys are capitalized
+  keyboardKeyR.forEach((key) => {
+    if (spanLettersText === key.toLocaleUpperCase()) {
+      // Makes the left shift key on the keyboard bold and blue
+      const $shiftKeyL = document.querySelector('#shift-l > h1');
+      if (!$shiftKeyL) throw new Error('$shiftKeyL does not exist');
+      $shiftKeyL.style.fontSize = '22px';
+      $shiftKeyL.style.fontWeight = '400';
+      $shiftKeyL.style.textShadow = 'none';
+      $shiftKeyL.style.color = 'black';
+    }
+  });
 }
-function resetExercise() {
+// Resets the application to starting conditions
+function reset() {
   if (!$wordString) throw new Error('$wordString does not exist');
   if (!$accuracy) throw new Error('$accuracy does not exist');
-  $wordString.innerHTML = '';
+  // Clear all existing content
+  while ($wordString.firstChild) {
+    $wordString.removeChild($wordString.firstChild);
+  }
   $accuracy.innerHTML = '';
+  // Reset trackers
   currentPosition = 0;
   accuracyArray.length = 0;
+  // Reset all keyboard keys
+  document.querySelectorAll('.keyboard-key h1').forEach((key) => {
+    if (key instanceof HTMLElement) {
+      key.removeAttribute('style');
+      key.style.fontWeight = '500';
+      key.style.color = 'black';
+    }
+  });
+  // Create fresh typing exercise
   toType(words);
+  // Ensure global reference to span letters is updated
+  const $newLetters = document.querySelectorAll('span.letter');
+  if ($newLetters.length === 0)
+    throw new Error('No span.letter elements found');
+  // Update the span letters reference
+  $spanLetters = $newLetters;
+  // Reset keyboard hint
+  keyboardHintOn(0);
 }
 // Sets up the start of the application
-const words = 'My dog is being stubborn.';
+const words = 'My Dog is being stubborn.';
 toType(words);
 // Sets up to measure accuracy of typing
 const possibleKeys = words.length;
@@ -211,39 +312,28 @@ const accuracyArray = [];
 // Adds new keys to keyboard to be manipulated
 addKeyboardKey(keyboardKey);
 let currentPosition = 0;
-let upperCase = false;
-const $spanLetters = document.querySelectorAll('span.letter');
-if ($spanLetters.length === 0) throw new Error('No span.letter elements found');
-keyboardHintOn(currentPosition);
+// let upperCase = false;
+let $spanLetters = document.querySelectorAll('span.letter');
+keyboardHintOn(0);
+// Update the event listener to use the refreshed elements
 document.addEventListener('keydown', (event) => {
-  // // Includes the 'Shift' key for capitalized letters
-  // // Checks if the letter is capitalized
-  // if (
-  //   $spanLetters[currentPosition].textContent ===
-  //   $spanLetters[currentPosition].textContent?.toLocaleUpperCase()
-  // ) {
-  //   upperCase = true;
-  // }
-  //////////////
-  // Add Code //
-  //////////////
-  // Disregards the 'Shift' key
   if (event.key === 'Shift') {
     return;
   }
-  // Changes the letter green if the correct key had been pressed
-  if (event.key === $spanLetters[currentPosition].textContent) {
-    $spanLetters[currentPosition].style.textDecoration = '';
-    $spanLetters[currentPosition].style.color = 'rgb(0, 180, 0)';
+  const $currentLetter = $spanLetters[currentPosition];
+  if (!$currentLetter) return;
+  if (event.key === $currentLetter.textContent) {
+    $currentLetter.style.textDecoration = '';
+    $currentLetter.style.color = 'rgb(0, 180, 0)';
     keyboardHintOff(currentPosition);
-    if ($spanLetters[currentPosition + 1]) {
-      $spanLetters[currentPosition + 1].style.textDecoration = 'underline';
+    const $nextLetter = $spanLetters[currentPosition + 1];
+    if ($nextLetter) {
+      $nextLetter.style.textDecoration = 'underline';
       keyboardHintOn(currentPosition + 1);
     }
     if (accuracyArray.length < currentPosition + 1) {
       accuracyArray.push(1);
       if (accuracyArray.length === possibleKeys) {
-        // Calculates accuracy of typing
         const initialValue = 0;
         const correctKeysTotal = accuracyArray.reduce(
           (toAdd, currentSum) => toAdd + currentSum,
@@ -252,18 +342,17 @@ document.addEventListener('keydown', (event) => {
         const accuracyScore = Math.floor(
           (correctKeysTotal / possibleKeys) * 100
         );
-        // Displays the final accuracy calculation
         $accuracy.innerHTML = `You were <div class="accuracy-score">${accuracyScore}%</div> accurate with your typing`;
         setTimeout(() => {
           if (confirm('Would you like to try again?')) {
-            resetExercise();
+            reset();
           }
         }, 0);
       }
     }
     currentPosition++;
   } else {
-    $spanLetters[currentPosition].style.color = 'red';
+    $currentLetter.style.color = 'red';
     if (accuracyArray.length < currentPosition + 1) {
       accuracyArray.push(0);
     }
