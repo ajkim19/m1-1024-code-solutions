@@ -115,3 +115,5 @@ for (const poke of pokedex) {
   const $pokeinfo: HTMLDivElement = renderPokemon(poke);
   $row.append($pokeinfo);
 }
+
+/// /
