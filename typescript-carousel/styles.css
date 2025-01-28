@@ -1,0 +1,11 @@
+.row {
+  display: flex;
+}
+
+.container {
+  width: 1024px;
+}
+
+.carousel {
+  width: 900px;
+}
