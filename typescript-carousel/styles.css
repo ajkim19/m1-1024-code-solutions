@@ -5,6 +5,10 @@ div {
   margin: 10px;
 }
 
+img {
+  width: 400px;
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -18,17 +22,14 @@ div {
 
 .column-full {
   flex-basis: 100%;
-  justify-content: center;
 }
 
 .one-tenth {
   flex-basis: 10%;
-  justify-content: center;
 }
 
 .one-half {
   flex-basis: 50%;
-  justify-content: center;
 }
 
 .carousel {
@@ -36,6 +37,20 @@ div {
   justify-content: center;
 }
 
+.card {
+  justify-content: space-between;
+}
+
+.card-main {
+  justify-content: center;
+}
+
 .img-nav-bar {
   justify-content: center;
+}
+
+.fa-circle {
+  margin: 15px 5px;
+  font-size: 24px;
+  font-weight: 500;
 }
