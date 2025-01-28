@@ -24,7 +24,7 @@ Answer the following questions in the provided markdown file before turning in t
 
   - scale(): Increases or decreases the size of an element.
 
-  - skew(): Skews an element along the X and Y axis.
+  - skew(): Skews an element along the X and Y axis.zzzzzzzzzzzzzzzzzzzzzzzz
 
   - translate(): Moves an element from its current position (left or right, up or down).
 
