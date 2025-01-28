@@ -239,8 +239,8 @@ document.addEventListener('keydown', (event: KeyboardEvent) => {
   //   upperCase = true;
   // }
 
-  /// ///////////
-  // Add Code //
+  /// ////////////
+  // Add Code ///
   /// ///////////
 
   // Disregards the 'Shift' key
