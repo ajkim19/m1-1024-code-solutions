@@ -14,7 +14,8 @@ Answer the following questions in the provided markdown file before turning in t
 
 - If you introduce CSS rules for a smaller `min-width` _after_ the styles for a larger `min-width` in your style sheet, the CSS rules for the **smaller** `min-width` will "win". Why is that?
 
-  - In CSS, the cascade and specificity rules govern which styles are applied when there are conflicts. So, if there are two rules that apply to the same condition, the rule that comes later wins, or overrides the previous.
+  - In CSS, the cascade and specificity rules govern which styles are applied when there are conflicts. So, if there are two rules that apply to the same condition, the rule that comes later overrides the previous.
+  - Source Order
 
 ## Notes
 
