@@ -6,6 +6,18 @@
   width: 1024px;
 }
 
+.column-full {
+  flex-basis: 100%;
+}
+
+.one-tenth {
+  flex-basis: 10%;
+}
+
+.one-half {
+  flex-basis: 50%;
+}
+
 .carousel {
   width: 900px;
 }
