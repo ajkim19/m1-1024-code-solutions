@@ -7,3 +7,5 @@ if (!dialog) throw new Error('dialog does not exist');
 
 openModal.addEventListener('click', () => dialog.show());
 dismissModal.addEventListener('click', () => dialog.close());
+
+/// /
