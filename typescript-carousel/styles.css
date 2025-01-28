@@ -1,23 +1,41 @@
+div {
+  border-color: black;
+  border-style: solid;
+  border-width: 2px;
+  margin: 10px;
+}
+
 .row {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .container {
   width: 1024px;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 .column-full {
   flex-basis: 100%;
+  justify-content: center;
 }
 
 .one-tenth {
   flex-basis: 10%;
+  justify-content: center;
 }
 
 .one-half {
   flex-basis: 50%;
+  justify-content: center;
 }
 
 .carousel {
   width: 900px;
+  justify-content: center;
+}
+
+.img-nav-bar {
+  justify-content: center;
 }
