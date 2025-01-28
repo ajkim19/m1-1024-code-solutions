@@ -348,6 +348,7 @@ let $spanLetters = document.querySelectorAll<HTMLSpanElement>(
   'span.letter'
 ) as NodeListOf<HTMLSpanElement>;
 
+
 keyboardHintOn(0);
 // Update the event listener to use the refreshed elements
 document.addEventListener('keydown', (event: KeyboardEvent) => {
