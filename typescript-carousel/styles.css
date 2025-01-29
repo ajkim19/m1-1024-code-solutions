@@ -63,5 +63,9 @@ img {
 
 .fa-chevron-left,
 .fa-chevron-right {
+  width: 60px;
+  height: 100px;
   font-size: 40px;
+  justify-content: center;
+  align-items: center;
 }
