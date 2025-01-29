@@ -5,18 +5,48 @@ const imageList = [
   'images/025.png',
   'images/039.png',
 ];
-const cardImage = document.querySelector('.card-image');
-
 let count = 0;
 
+const cardImage = document.querySelector('.card-image') as HTMLImageElement;
+if (!cardImage) throw new Error('cardImage does not exist');
+cardImage.setAttribute('src', imageList[count]);
+
+const imgNavBar = document.querySelector('.img-nav-bar') as HTMLDivElement;
+if (!imgNavBar) throw new Error('imgNavBar does not exist');
+const imgNavBarChildren = imgNavBar.children;
+if (!imgNavBarChildren) throw new Error('imgNavBarChildren does not exist');
+let imgNavBarChildCurrent = imgNavBarChildren[0] as HTMLElement;
+if (!imgNavBarChildCurrent)
+  throw new Error('imgNavBarChildCurrent does not exist');
+imgNavBarChildCurrent.style.fontWeight = '900';
+
+let imgNavBarChildPrevious: HTMLElement;
+
 setInterval(() => {
-  if (count === 5) {
-    count = 0;
-  }
+  count++;
   // Changes the displayed image
   if (!cardImage) throw new Error('cardImage does not exist');
   cardImage.setAttribute('src', imageList[count]);
 
-  // Increments the count for the next image
-  count++;
+  // Fills in the circle to the associated image
+  if (!imgNavBarChildren) throw new Error('imgNavBarChildren does not exist');
+  imgNavBarChildCurrent = imgNavBarChildren[count] as HTMLElement;
+
+  // Changes class name to make icon a solid circle
+  if (!imgNavBarChildCurrent) throw new Error('imgNavBarChild does not exist');
+  imgNavBarChildCurrent.style.fontWeight = '900';
+
+  // Hollows out the previously solid circle
+  if (count === 0) {
+    imgNavBarChildPrevious = imgNavBar.children[4] as HTMLElement;
+  } else {
+    imgNavBarChildPrevious = imgNavBar.children[count - 1] as HTMLElement;
+  }
+  if (!imgNavBarChildPrevious)
+    throw new Error('imgNavBarChildPrevious does not exist');
+  imgNavBarChildPrevious.style.fontWeight = '400';
+
+  if (count === 4) {
+    count = -1;
+  }
 }, 3000);
