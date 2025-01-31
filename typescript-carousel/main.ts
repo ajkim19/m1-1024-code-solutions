@@ -29,6 +29,11 @@ $imgNavBarChildCurrent.style.fontWeight = '900';
 let $imgNavBarChildPrevious: HTMLElement;
 
 function carousel(): void {
+  count++;
+  if (count === 5) {
+    count = 0;
+  }
+
   // Changes the displayed image
   if (!$cardImage) throw new Error('$cardImage does not exist');
   $cardImage.setAttribute('src', imageList[count]);
@@ -53,13 +58,28 @@ function carousel(): void {
   if (!$imgNavBarChildPrevious)
     throw new Error('$imgNavBarChildPrevious does not exist');
   $imgNavBarChildPrevious.style.fontWeight = '400';
-
-  count++;
-
-  if (count === 5) {
-    count = 0;
-  }
 }
 
-// let carouselIntervalID =
-setInterval(carousel, 3000);
+let carouselIntervalID = setInterval(carousel, 3000);
+
+$imgNavBar.addEventListener('click', (event: Event) => {
+  clearInterval(carouselIntervalID);
+  $imgNavBarChildCurrent.style.fontWeight = '400';
+  if (!$imgNavBar) throw new Error('$imgNavBar does not exist');
+  const eventTarget = event.target as HTMLElement;
+  console.log('eventTarget', eventTarget);
+  for (let i = 0; i < $imgNavBarChildren.length; i++) {
+    if ($imgNavBarChildren[i] === eventTarget) {
+      count = i;
+      if (!$cardImage) throw new Error('$cardImage does not exist');
+      $cardImage.setAttribute('src', imageList[count]);
+      if (!$imgNavBarChildren)
+        throw new Error('$imgNavBarChildren does not exist');
+      $imgNavBarChildCurrent = $imgNavBarChildren[count] as HTMLElement;
+      if (!$imgNavBarChildCurrent)
+        throw new Error('$imgNavBarChild does not exist');
+      $imgNavBarChildCurrent.style.fontWeight = '900';
+    }
+  }
+  carouselIntervalID = setInterval(carousel, 3000);
+});
