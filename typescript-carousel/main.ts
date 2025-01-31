@@ -99,3 +99,19 @@ $chevronRight.addEventListener('click', () => {
     throw new Error('$imgNavBarChild does not exist');
   $imgNavBarChildCurrent.style.fontWeight = '900';
 });
+
+$chevronLeft.addEventListener('click', () => {
+  clearInterval(carouselIntervalID);
+  $imgNavBarChildCurrent.style.fontWeight = '400';
+  count--;
+  if (count === -1) {
+    count = 4;
+  }
+  if (!$cardImage) throw new Error('$cardImage does not exist');
+  $cardImage.setAttribute('src', imageList[count]);
+  if (!$imgNavBarChildren) throw new Error('$imgNavBarChildren does not exist');
+  $imgNavBarChildCurrent = $imgNavBarChildren[count] as HTMLElement;
+  if (!$imgNavBarChildCurrent)
+    throw new Error('$imgNavBarChild does not exist');
+  $imgNavBarChildCurrent.style.fontWeight = '900';
+});
