@@ -28,5 +28,3 @@ lightBulb.addEventListener('click', () => {
     turnOnLightBulb();
   }
 });
-
-/// //
