@@ -12,4 +12,4 @@ const intervalId = setInterval(function () {
   }
 }, 1000);
 
-/// //
+/// /////////
