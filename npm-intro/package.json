@@ -1,0 +1,19 @@
+{
+  "name": "npm-intro",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "The original package manager for both Node.js and frontend web applications.",
+  "dependencies": {
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.19.0"
+  },
+  "scripts": {
+    "hello": "echo 'Hello, LearningFuze'"
+  }
+}
