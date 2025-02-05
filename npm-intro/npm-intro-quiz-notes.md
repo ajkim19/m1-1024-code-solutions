@@ -31,7 +31,7 @@ Answer the following questions in the provided markdown file before turning in t
 
 - What is a devDependency and how do you add one to a package?
 
-  - A devDependency is a package needed for development (e.g., testing frameworks, linters, build tools) but not required in production.
+  - A devDependency is a package needed for development (e.g., testing frameworks such as jest, linters such as eslint, build tools) but not required in production.
 
 - How do you define and run `npm` scripts? Why are these useful?
   - You define `npm` scripts by editing the object in `package.json` under the key `"scripts"`.
