@@ -1,0 +1,500 @@
+   68  git add .
+   69  git reset
+   70  git status
+   71  git restore ts/main.ts
+   72  git status
+   73  git add .
+   74  git reset
+   75  git add .
+   76  git commit -m "Queried the DOM for the ul element to prepend new items to #2"
+   77  git push origin issue-2-view-entries 
+   78  npx tsc --watch
+   79  git add .
+   80  git commit -m "The renderEntry function now generates and returns a DOM tree for a single entry that matches the entries you created in the unordered list #2"
+   81  git push origin issue-2-view-entries 
+   82  npx tsc --watch
+   83  git add .
+   84  git commit -m "Created an event listener on the document which listens for the DOMContentLoaded event, loops through the data.entries array, generates a DOM tree for each entry in the array, and appends that DOM tree to the unordered list #2"
+   85  git push origin issue-2-view-entries 
+   86  npx tsc --watch
+   87  git add .
+   88  git commit -m "Remove the example HTML entries from index.html once the user's entries are successfully being appended to the DOM on page load and replace them with a message indicating that no entries have been recorded which matches the figma. #2"
+   89  git push origin issue-2-view-entries 
+   90  npx tsc --watch
+   91  git add .
+   92  git commit -m "Create a function named toggleNoEntries which toggles the no entries text to show or hide when the function is called. #2"
+   93  git push origin issue-2-view-entries 
+   94  git add .
+   95  git commit -m "Create a new function named viewSwap with a single parameter representing the name of the view to show #2"
+   96  git add .
+   97  git commit -m "Create a new function named viewSwap with a single parameter representing the name of the view to show #2"
+   98  git push origin issue-2-view-entries 
+   99  git add .
+  100  git commit -m "Fixed viewSwap"
+  101  git push origin issue-2-view-entries 
+  102  npx tsc --watch
+  103  git add .
+  104  git commit -m "Add an anchor to the navbar to show the ”entries” view #2"
+  105  git push origin issue-2-view-entries 
+  106  npx tsc --watch
+  107  git add #2
+  108  git commit -m "Add an anchor to the entries view to show the entry-form #2"
+  109  git push origin issue-2-view-entries 
+  110  git add .
+  111  git commit -m "Render a DOM tree for the newly submitted entry object using the renderEntry function #2"
+  112  git push origin issue-2-view-entries 
+  113  git add .
+  114  git commit -m "Use the viewSwap to show the ”entries” view #2"
+  115  git push origin issue-2-view-entries 
+  116  git add .
+  117  git commit -m "Conditionally uses the toggleNoEntries function as needed to remove the no entries text #2"
+  118  git push origin issue-2-view-entries 
+  119  git add .
+  120  git commit -m "Fixed submitForm"
+  121  git push origin issue-2-view-entries 
+  122  npx tsc --watch
+  123  npx tsc --watch
+  124  git add .
+  125  git commit -m "The DOMContentLoaded callback function now uses the viewSwap function to show the view which was displayed prior to page refresh #2"
+  126  git push origin issue-2-view-entries 
+  127  git add .
+  128  git commit -m "Finalized Issue 2"
+  129  git push origin issue-2-view-entries 
+  130  npx tsc --watch
+  131  git add .
+  132  git commit -m "Finalized Issue 2"
+  133  git push origin issue-2-view-entries 
+  134  npx tsc --watch
+  135  npx tsc --watch
+  136  git switch main
+  137  git stash
+  138  git switch main
+  139  git switch issue-2-view-entries 
+  140  git switch main
+  141  git pull
+  142  git checkout -b issue-3-edit-entries
+  143  git branch -d issue-3-edit-entries
+  144  git checkout -b issue-3-edit-entry
+  145  git switch main
+  146  git branch -d issue-3-edit-entries
+  147  git switch issue-3-edit-entry 
+  148  git add .
+  149  git commit -m "Add a FontAwesome pencil icon next to the title of each entry which matches the figma example #3"
+  150  git push origitn issue-3-edit-entry 
+  151  git push origin issue-3-edit-entry 
+  152  git add .
+  153  git commit -m "Add a data-entry-id attribute to the li that stores the entryId of the entry being rendered #3"
+  154  git push origin issue-3-edit-entry 
+  155  git add .
+  156  git commit -m "Add an event listener to the ul in the entries view which uses the viewSwap function to show the form #3"
+  157  git push origin issue-3-edit-entry 
+  158  git add .
+  159  git commit -m "Add an event listener to the ul in the entries view which uses the viewSwap function to show the form #3"
+  160  git push origin issue-3-edit-entry 
+  161  npx tsc --watch
+  162  git add .
+  163  git commit -m "Find the entry object in the data.entries array whose id matches the data-entry-id attribute value of the clicked entry and assigns that entry’s object to the data.editing property #3"
+  164  git push origin issue-3-edit-entry 
+  165  git add .
+  166  git commit -m "Pre-populate the entry form with the clicked entry's values from the object stored in the data.editing property #3"
+  167  git push origin issue-3-edit-entry 
+  168  git add .
+  169  git commit -m "Updates the title of the entry-form view to Edit Entry #3"
+  170  git push origin issue-3-edit-entry 
+  171  npx tsc --watch
+  172  git checkout issue-3-edit-entry 
+  173  git checkout 08ab245b086e7ca53a8b5123336c85e8fc49c1e1
+  174  git stash
+  175  git checkout 08ab245b086e7ca53a8b5123336c85e8fc49c1e1
+  176  git checkout 08ab245b086e7ca53a8b5123336c85e8fc49c1e1
+  177  git checkout 0802b7622438cae77e45096953f9a94581a1c47d
+  178  git switch -
+  179  git switch issue-3-edit-entry 
+  180  cd ..
+  181  sudo rm -r code-journal/
+  182  git clone https://github.com/ajkim19/code-journal.git
+  183  cd code-journal/
+  184  git switch issue-3-edit-entry 
+  185  git pull
+  186  npx tsc --watch
+  187  git add .
+  188  git commit -m "Updates the title of the entry-form view to Edit Entry #3"
+  189  git switch issue-3-edit-entry 
+  190  git push origin issue-3-edit-entry 
+  191  git add .
+  192  git commit -m "Update the entry form's submit handler to perform the standard functionality for a new entry if data.editing is null #3"
+  193  git push origin issue-3-edit-entry 
+  194  git add .
+  195  git commit -m "Update the entry form's submit handler to assign the entry id value from data.editing to the new object with the updated form values if data.editing is not null #3"
+  196  git push origin issue-3-edit-entry 
+  197  npx tsc --watch
+  198  git add .
+  199  git commit -m "Fixed submitForm"
+  200  git push origin issue-3-edit-entry 
+  201  npx tsc --watch
+  202  git add .
+  203  git commit -m "Completed issue-3-edit-entry"
+  204  git push origin issue-3-edit-entry 
+  205  npx tsc --watch
+  206  git switch main
+  207  git stash
+  208  npx tsc --watch
+  209  npx tsc --watch
+  210  git switch main
+  211  git pull
+  212  git checkout -b issue-4-delete-entry
+  213  npx tsc --watch
+  214  git add .
+  215  git commit -m "Add a button to the entry form with the text Delete Entry which is only visible when an entry is currently being edited #4"
+  216  git push origin issue-4-delete-entry 
+  217  npx tsc --watch
+  218  git add .
+  219  git commit -m "Show a confirmation modal when the user clicks Delete Entry #4"
+  220  git push origin issue-4-delete-entry 
+  221  git add .
+  222  git commit -m "Remove the corresponding entry object from the data model's entry array when the user clicks Confirm #4"
+  223  git push origin issue-4-delete-entry 
+  224  git add .
+  225  git commit -m "Conditionally uses the toggleNoEntries function to show the no entries text if needed when the user clicks Confirm #4"
+  226  git push origin issue-4-delete-entry 
+  227  npx tsc --watch
+  228  git switch typescript-light-bulb 
+  229  git switch main
+  230  git merge typescript-light-bulb 
+  231  npx tsc --watch
+  232  npx tsc --watch
+  233  npx tsc --watch
+  234  npx tsc --watch
+  235  npx tsc --watch
+  236  git add .
+  237  git commit -m "Completed Issue #4"
+  238  git push origin issue-4-delete-entry 
+  239  git switch typescript-objects 
+  240  git add typescript-objects/
+  241  git commit -m "Making another push"
+  242  git push origin typescript-objects
+  243  git push origin typescript-objects/
+  244  git reset
+  245  git switch typescript-objects 
+  246  git switch typescript-objects 
+  247  git stash
+  248  git switch typescript-objects 
+  249  git add typescript-objects/
+  250  git push origin typescript-objects/
+  251  git commit -m "Making another push"
+  252  git push origin typescript-objects
+  253  git switch main
+  254  git add typescript-arrays/
+  255  git reset
+  256  git switch typescript-arrays
+  257  git add typescript-arrays/
+  258  git reset
+  259  git add typescript-arrays/
+  260  git commit -m "Making another push"
+  261  git push origin typescript-arrays 
+  262  git switch main
+  263  git switch typescript-data-model 
+  264  git add typescript-data-model 
+  265  git commit -m "Making another push"
+  266  git push origin typescript-data-model 
+  267  git switch main
+  268  git switch dom-creation 
+  269  git add dom
+  270  git commit -m "Making another push"
+  271  git push origin dom-creation
+  272  git switch main
+  273  git switch typescript-modal 
+  274  git add typescript-modal 
+  275  git commit -m "Making another push"
+  276  git push origin typescript-modal 
+  277  git switch dom-event-delegation 
+  278  git add dom-event-delegation 
+  279  git commit -m "Making another push"
+  280  git push origin dom-event-delegation 
+  281  git switch main
+  282  git switch dom-event-delegation 
+  283  git add dom-event-delegation 
+  284  git commit -m "Making another push"
+  285  git push origin dom-event-delegation 
+  286  git switch typescript-forms 
+  287  git add typescript-forms 
+  288  git commit -m "Making another push"
+  289  git push origin typescript-forms 
+  290  git switch typescript-data-model
+  291  git stash
+  292  git switch typescript-data-model\
+  293  git switch typescript-data-model
+  294  git switch main
+  295  git switch typescript-data-model
+  296  git switch typescript-light-bulb 
+  297  git ass typescript-light-bulb A
+  298  git add typescript-light-bulb 
+  299  git commit -m "Making another push"
+  300  git push origin typescript-light-bulb 
+  301  git switch css-media-queries 
+  302  git add css-media-queries 
+  303  git commit -m "Making another push"
+  304  git add css-media-queries 
+  305  git commit -m "Making another push"
+  306  git push origin css-media-queries 
+  307  git switch css-transitions-and-transforms 
+  308  git add css-transitions-and-transforms 
+  309  git commit -m "Making another push"
+  310  git push origin css-transitions-and-transforms 
+  311  git switch typescript-typing-tutor 
+  312  git add typescript-typing-tutor 
+  313  git add typescript-typing-tutor 
+  314  git commit -m "Making another push"
+  315  git push origin typescript-typing-tutor 
+  316  git switch css-responsive-layout 
+  317  git add css-responsive-layout 
+  318  git commit -m "Making another push"
+  319  git push css-responsive-layout 
+  320  git push origin css-responsive-layout 
+  321  git switch typescript-modal
+  322  git add typescript-modal
+  323  git commit -m "Making another push"\
+  324  git commit -m "Making another push"
+  325  git push origin typescript-modal
+  326  git switch css-media-queries 
+  327  git add css-media-queries 
+  328  git commit -m "Making another push"
+  329  git push origin css-media-queries 
+  330  git switch css-transitions-and-transforms 
+  331  git add css-transitions-and-transforms 
+  332  git commit -m "Making another push"
+  333  git push origin css-transitions-and-transforms 
+  334  git switch main
+  335  git switch css-transitions-and-transforms 
+  336  git add css-transitions-and-transforms 
+  337  git commit -m "Making another push"
+  338  git push origin css-transitions-and-transforms 
+  339  git switch css-media-queries media-
+  340  git switch css-media-queries
+  341  git add css-media-queries
+  342  git commit -m "Making another push"
+  343  git push origin css-media-queries
+  344  git switch main
+  345  git switch responsive layout
+  346  git switch css-responsive-layout
+  347  git add css-responsive-layout
+  348  git commit -m "Updated notes"
+  349  git push origin css-responsive-layout
+  350  git switch css-media-queries 
+  351  git status
+  352  git status
+  353  git add css-media-queries/
+  354  git status
+  355  git commit -m "Added stuff"
+  356  git push origin css-media-queries 
+  357  git switch main
+  358  git switch typescript-view-swapping 
+  359  git add typescript-view-swapping 
+  360  git commit -m "Added stuff"
+  361  git push origin typescript-view-swapping 
+  362  git switch main
+  363  git pull
+  364  git checkout -b typescript-timers
+  365  npx tsc --watch
+  366  cs typescript-timers/
+  367  npx ts  --watch
+  368  npx tsc --watch
+  369  cd typescript-timers/
+  370  npx tsc --watch
+  371  cd typescript-timers/
+  372  nps tsc --watch
+  373  npx tsc --watch
+  374  git add typescript-timers
+  375  git commit -m "Completed typescript-timers exercises"
+  376  git push origin typescript-timers
+  377  git switch main
+  378  git checkout -b typescript-carousel
+  379  git switch typescript-local-storage 
+  380  cd typescript-local-storage/
+  381  npx tsc --watch
+  382  cd ..
+  383  git switch typescript-timers
+  384  git stash
+  385  git switch typescript-timers
+  386  git add typescript-timers/
+  387  git commit -m "Making another push"
+  388  git reset
+  389  git add typescript-timers/
+  390  git commit -m "Making another push"
+  391  git push origin typescript-timers
+  392  git switch typescript-and-json 
+  393  git add typescript-and-json/
+  394  git add typescript-and-json/
+  395  git reset
+  396  git add typescript-and-json
+  397  git commit -m "Making another push"
+  398  git push origin typescript-and-json
+  399  git switch typescript-local-storage 
+  400  git add typescript-local-storage 
+  401  git commit -m "Making another push"
+  402  git push origin typescript-local-storage 
+  403  git switch main
+  404  git checkout -b  typescript-destructuring
+  405  cd typescript-destructuring/
+  406  npx tsc --watch
+  407  git add typescript-operators/
+  408  git commit -m "Completed quiz questions"
+  409  git reset
+  410  git add typescript-operators/
+  411  git commit -m "Completed quiz questions"
+  412  git reset
+  413  git add typescript-operators/
+  414  git commit -m "Completed quiz questions"
+  415  git push origin typescript-operators
+  416  cd typescript-operators/
+  417  npx tsc --watch
+  418  cd ..
+  419  git add typescript-operators/
+  420  git commit -m "Completed typescript-operators exercises"
+  421  git push origin typescript-operators
+  422  git switch typescript-carousel
+  423  git switch main
+  424  git pull
+  425  git checkout -b array-methods
+  426  cd array-methods/
+  427  npx tsc --watch
+  428  cd ..
+  429  git add array-methods/
+  430  git commit -m "Completed array-methods exercises"
+  431  git reset
+  432  git add array-methods/
+  433  git commit -m "Completed array-methods exercises"
+  434  git push origin array-methods
+  435  git switch typescript-and-json
+  436  git add typescript-and-json
+  437  git commit -m "Making another another push"
+  438  git push origin typescript-and-json
+  439  git switch typescript-local-storage 
+  440  git add typescript-local-storage 
+  441  git commit -m "Making another another push"
+  442  git reset
+  443  git add typescript-local-storage 
+  444  git commit -m "Making another another push"
+  445  git push origin typescript-local-storage 
+  446  git switch typescript-timers
+  447  git add typescript-timers
+  448  git commit -m "Making another another push"
+  449  git push origin typescript-timers
+  450  git reset
+  451  git pull
+  452  git pull origin typescript-timers
+  453  git push origin typescript-timers
+  454  git pull origin typescript-timers
+  455  git pull -a
+  456  cd ..
+  457  rm -r m1-1024-code-solutions/
+  458  sudo rm -r m1-1024-code-solutions/
+  459  ls
+  460  git switch typescript-times
+  461  git switch typescript-timers
+  462  git config --global --add safe.directory /workspaces/m1-1024-code-solutions
+  463  git pull
+  464  git switch typescript-timers
+  465  sudo git switch typescript-timers
+  466  git pull
+  467  sudo su
+  468  sudo chmod 777 amt/ -R
+  469  git switch main
+  470  sudo chmod 777\
+  471  sudo chmod 777
+  472  sudo chmod 777 pwd
+  473  sudo chmod 777 /workspaces/m1-1024-code-solutions
+  474  git switch main
+  475  sudo   rm -f .git/index.lock
+  476  git switch main
+  477  sudo   rm -f /workspaces/m1-1024-code-solutions/.git/index.lock
+  478  git switch main
+  479  sudo rm -f /workspaces/m1-1024-code-solutions/.git/index.lock
+  480  git switch maoin
+  481  git switch main
+  482  sudo git switch main
+  483  sudo chmod 777 /workspaces/m1-1024-code-solutions
+  484  git switch main
+  485  ls -la /workspaces/m1-1024-code-solutions/.git/index.lock
+  486  git switch typescript-timers
+  487  sudo git switch typescript-timers
+  488  cd ../..
+  489  cd workspace
+  490  cd ..
+  491  cd workspaces
+  492  rm -r m1-1024-code-solutions/
+  493  sudo rm -r m1-1024-code-solutions/
+  494  git stash
+  495  git switch typescript-timers
+  496  git add typescript-timers
+  497  git commit -m "Making another another push"
+  498  git push origin typescript-timers
+  499  git switch main
+  500  git pull
+  501  git branch
+  502  git branches
+  503  git switch typescript-destructuring 
+  504  git switch main
+  505  git pull
+  506  git checkout -b command-line-basics
+  507  cd command-line-basics/
+  508  man man
+  509  man cat
+  510  cat laziness.txt impatience.txt hubris.txt
+  511  cat laziness.txt
+  512  cat impatience.txt
+  513  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  514  cat three-virtues.txt
+  515  man ls
+  516  man ls
+  517  ls
+  518  ls -a
+  519  ls -F
+  520  ls -aF
+  521  ls lfz-staff/
+  522  ls -aF lfz-staff/ > lfz-staff/contents.txt
+  523  cat lfz-staff/contents.txt
+  524  man pwd
+  525  pwd
+  526  pwd > i-was-here.txt
+  527  ls
+  528  cat i-was-here.txt 
+  529  man echo
+  530  echo 'Hello, World!'
+  531  echo 'Hello, World!' > hello.txt
+  532  cat hello.txt
+  533  man touch
+  534  touch tag-youre-it.txt
+  535  ls
+  536  touch snoot/boop.txt
+  537  ls snoot/
+  538  man mkdir
+  539  mkdir parent
+  540  ls
+  541  ls -a
+  542  ls -F
+  543  mkdir parent/child/grandchild
+  544  touch -p parent/child/grandchild/.gitkeep
+  545  mkdir -p parent/child/grandchild
+  546  touch -p parent/child/grandchild/.gitkeep
+  547  touch parent/child/grandchild/.gitkeep
+  548  ls -aF parent/child/grandchild
+  549  man mv
+  550  man mv
+  551  man
+  552  man mv
+  553  mv pokiemans/ pokemon/
+  554  ls
+  555  ls pokemon
+  556  man rm
+  557  rm lol.txt
+  558  ls
+  559  ls kill-me
+  560  rm -r kill-me/
+  561  ls
+  562  man cp
+  563  cp and-then.txt no-and-then.txt
+  564  ls
+  565  cat and-then.txt no-and-then.txt
+  566  man history
+  567  history > command-history.txt
