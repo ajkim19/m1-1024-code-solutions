@@ -60,3 +60,5 @@ console.log('book5:', book5);
 const [, , , book6] = library;
 
 console.log('book6:', book6);
+
+/// ///////////////
