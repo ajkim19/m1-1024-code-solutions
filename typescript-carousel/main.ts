@@ -115,3 +115,5 @@ $chevronLeft.addEventListener('click', () => {
     throw new Error('$imgNavBarChild does not exist');
   $imgNavBarChildCurrent.style.fontWeight = '900';
 });
+
+/// ///////////////
