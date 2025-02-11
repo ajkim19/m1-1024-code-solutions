@@ -8,7 +8,7 @@ const elapsed = (): string =>
 
 async function throwOnce(): Promise<void> {
   try {
-    const msg = await read('foo', false);
+    const msg = await read('foo', true);
     console.log(elapsed(), 'throwOnce:', msg);
   } catch (error) {
     console.log(elapsed(), 'throwOnce Error:', error);
@@ -17,11 +17,11 @@ async function throwOnce(): Promise<void> {
 
 async function throwSeveral(): Promise<void> {
   try {
-    const msg1 = await read('foo1', false);
+    const msg1 = await read('foo1', true);
     console.log(elapsed(), 'throwSeveral1:', msg1);
-    const msg2 = await read('foo2', false);
+    const msg2 = await read('foo2', true);
     console.log(elapsed(), 'throwSeveral2:', msg2);
-    const msg3 = await read('foo3', false);
+    const msg3 = await read('foo3', true);
     console.log(elapsed(), 'throwSeveral3:', msg3);
   } catch (error) {
     console.log(elapsed(), 'throwSeveral Error:', error);
@@ -30,11 +30,11 @@ async function throwSeveral(): Promise<void> {
 
 async function throwChained(): Promise<void> {
   try {
-    const msg1 = await read('foo-chain', false);
+    const msg1 = await read('foo-chain', true);
     console.log(elapsed(), 'throwChained1:', msg1);
-    const msg2 = await read(msg1, false);
+    const msg2 = await read(msg1, true);
     console.log(elapsed(), 'throwChained2:', msg2);
-    const msg3 = await read(msg2, false);
+    const msg3 = await read(msg2, true);
     console.log(elapsed(), 'throwChained3:', msg3);
   } catch (error) {
     console.log(elapsed(), 'throwChained Error:', error);
