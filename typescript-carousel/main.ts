@@ -116,4 +116,4 @@ $chevronLeft.addEventListener('click', () => {
   $imgNavBarChildCurrent.style.fontWeight = '900';
 });
 
-console.log('push');
+/// //
