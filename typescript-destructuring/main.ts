@@ -61,4 +61,4 @@ const [, , , book6] = library;
 
 console.log('book6:', book6);
 
-/// ///////////////
+/// ////
