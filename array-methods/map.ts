@@ -17,3 +17,5 @@ const newPrices2: number[] = prices.map((originalNumber) =>
 );
 
 console.log(newPrices2);
+
+/// ///
