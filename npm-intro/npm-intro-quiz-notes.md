@@ -38,6 +38,8 @@ Answer the following questions in the provided markdown file before turning in t
   - The commands will the keys (e.g. `"start"`) and the script will be the value to those keys (e.g. `"node index.js"`)
     - `"scripts": { "start": "node index.js" }`
 
+/////////////
+
 ## Notes
 
 All student notes should be written here.
