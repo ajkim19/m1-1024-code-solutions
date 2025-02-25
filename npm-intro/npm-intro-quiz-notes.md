@@ -32,13 +32,13 @@ Answer the following questions in the provided markdown file before turning in t
 - What is a devDependency and how do you add one to a package?
 
   - A devDependency is a package needed for development (e.g., testing frameworks such as jest, linters such as eslint, build tools) but not required in production.
+  - npm install <package-name> --save-dev
 
 - How do you define and run `npm` scripts? Why are these useful?
   - You define `npm` scripts by editing the object in `package.json` under the key `"scripts"`.
   - The commands will the keys (e.g. `"start"`) and the script will be the value to those keys (e.g. `"node index.js"`)
     - `"scripts": { "start": "node index.js" }`
-
-/////////////
+    - Makes things convenient
 
 ## Notes
 
