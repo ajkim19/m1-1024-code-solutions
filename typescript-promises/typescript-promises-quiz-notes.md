@@ -21,6 +21,8 @@ Answer the following questions in the provided markdown file before turning in t
 - How do you handle the rejection of a Promise?
   - .catch()
 
+/////////////////////
+
 ## Notes
 
 All student notes should be written here.
