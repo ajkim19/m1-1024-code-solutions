@@ -40,8 +40,7 @@ Answer the following questions in the provided markdown file before turning in t
 
 - What data types can be spread into an array? Into an object?
 
-  - Iterables and array-like objects can be spread into an array.
-  - Only objects can be spread into other objects
+  - Iterables and array-like objects can be spread into both arrays and objects.
 
 - How does spread syntax differ from rest syntax?
   - Spread Syntax

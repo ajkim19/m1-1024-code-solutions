@@ -24,10 +24,10 @@ const v5: Customer = {
 };
 
 // 4.i
-console.log(v1 && 'v1 is truthy');
+v1 && console.log('v1 is truthy');
 
 // 4.ii
-console.log(v2 && 'v2 is truthy');
+v2 && console.log('v2 is truthy');
 
 // 5.i
 const config1 = v1 || 'default-value';
