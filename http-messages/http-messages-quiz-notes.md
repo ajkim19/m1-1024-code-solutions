@@ -43,6 +43,8 @@ Answer the following questions in the provided markdown file before turning in t
     - POST and PUT requests usually have a body with data.
     - Responses with status codes like 204 No Content or 304 Not Modified do not include a body.
 
+///////////////////
+
 ## Notes
 
 All student notes should be written here.
