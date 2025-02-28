@@ -43,6 +43,8 @@ Answer the following questions in the provided markdown file before turning in t
 - Which style of asynchronous programming do you prefer — callbacks, `Promise.then`, or `async/await`? Why?
   - `async/await` is preferred for its sequential readability.
 
+///////////////////////////////
+
 ## Notes
 
 All student notes should be written here.
