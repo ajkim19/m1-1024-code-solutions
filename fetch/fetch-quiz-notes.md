@@ -10,7 +10,7 @@ Answer the following questions in the provided markdown file before turning in t
 
 - What is the default request method used by `fetch()`?
 
-  - The default request method for fetch is GET. This means if no method is specified, fetch will perform a GET request.
+  - If no method is specified, fetch will perform a GET request.
 
 - How do you specify the request method (`GET`, `POST`, etc.) when calling `fetch`?
 
@@ -18,9 +18,8 @@ Answer the following questions in the provided markdown file before turning in t
   - `fetch(url, { method: 'POST' });`
 
 - How does `fetch` report errors?
-  - Fetch considers a promise resolved even if the server responds with an error status code (like 404 or 500). It only rejects the promise on network failures or if anything prevented the request from completing. To handle HTTP errors, you need to check the response.ok property or the status code directly within the response handling logic.
 
-////////////////
+  - Fetch considers a promise resolved even if the server responds with an error status code (like 404 or 500). It only rejects the promise on network failures or if anything prevented the request from completing. To handle HTTP errors, you need to check the response.ok property or the status code directly within the response handling logic.
 
 ## Notes
 
